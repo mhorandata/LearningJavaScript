@@ -255,17 +255,74 @@
         <li>Calcuations with folats are sometimes inaccurate.</li>
         <li>When working with money it is best practice to calculate in cents and divide the total by 100 to get back dollars.</li>
     </ul> 
+    <br>
+        <p>Rounding a number means changing a decimal or fraction to the whole number (integer) closest to it.</p>
+        <p>To round a number you can use the following code in the Console:</p>
+        <p>Math.round()</p>
+        <p>Make sure the M in Math is capitalized since JavaScript is case sensitive.</p>
+        <p>Try typing a number between the brackets in the console like:</p>
+        <p>Math.round(5.3)</p>
+        <p>This will round the number down to 5.</p>
+        <p>Now if you try:</p>
+        <p>Math.round(5.6)</p>
+        <p>It will round up to 6.</p>
+        <p>Now in the cart we will add the tax up again but use rounding to get the exact tax shown in the
+            Order Summary.</p>
+        <p>In the console put the cost of the items in cents surrounded by brackets:</p>
+        <p>(2095 + 799)</p>
+        <p>Then we will multiply by the tax percent or 0.1.</p>
+        <p>(2095 + 799) * 0.1</p>
+        <p>We need to surround the whole thing by addtional brackets to divide by 100 and convert
+            back into dollars.</p>
+            <p>((2095 + 799) * 0.1) / 100</p>
+            <p>When you have brackets inside of brackets the innermost brackets get
+                calculated first.</p>
+        <p>If we calculate ((2095 + 799) * 0.1) / 100  in the console it will give us 2.894</p>
+        <p>This is close to the Estimated tax (10%): section but the value we have includes a value
+            that is less then even on cent (the 4 at the end).</p>
+        <p>Copy the ((2095 + 799) * 0.1) / 100 and paste back into the console.</p>
+        <p>We don't want to round the whole equastion ((2095 + 799) * 0.1) / 100 since that 
+            would turn 2.894 into 3. We just need to round the ((2095 + 799) * 0.1) part.</p>
+        <p>Rounding ((2095 + 799) * 0.1) would give us 289 which is the number of cents.</p>
+        <p>To round like this type in the console:</p>
+        <p>Math.round((2095 + 799) * 0.1)</p>
+        <p>We still need to convert the answer back into dollars so you will need to divide by 100:</p>
+        <p>Math.round((2095 + 799) * 0.1) / 100</p>
+        <p>This will give you 2.89 which is exactly the value next to Estimated tax (10%): in
+            the Orders Summary section</p>
+        <br>
+        <h4>How to use Google when learning to code:</h4>
+        <p>Go to Google.com (or open the Chorme Web Browser).</p>
+        <p>When you search you always want to search for what you're trying to do.</p>
+        <p>For searching for how to round a number you would search:</p>
+        <p>JavaScript how to round a number</p>
+        <p>Then you press Enter.</p>
+        <p>Sometimes the first result at the top is the answer you were looking for.</p>
+        <p>Sometimes though you need to scroll down to the other results to find what you are looking for.</p>
+        <p>A lot of the results will give you additional information about the code such as a description 
+            of what the code does and examples for how to use the code.</p>
+        <p>You may not understand all the code results you get in your results. Just
+            focus on the pieces of code that look familiar and use that portion in your own code.</p>
+        <p>You don't have to understand every bit of code you see online.</p>
+        <p>As you go through this document you will start to understand more of what you see.</p>
+        <p>A.I. Tools are also available to help return code results.</p>
+        <p>The below tool is a popular A.I. tool option (be mindful the code results may have errors):</p>
+        <p>https://chat.openai.com/</p>
+
+        <hr>
+        <br>
+        <h3>Strings</h3>
         <p></p>
 
         <hr>    
         <br>
         <Footer>
             <h3>Current video location:</h3>
-                <a href="https://youtu.be/SBmSRK3feww?t=2196">Video Link</a>
+                <a href="https://youtu.be/SBmSRK3feww?t=2726">Video Link</a>
                 <p>Current Progress:</p>
                 <p>Line:</p>
-                <p>258</p>
-                <p>13 Jun 2023</p>
+                <p>304</p>
+                <p>14 Jun 2023</p>
             </Footer>
             </body>
         
