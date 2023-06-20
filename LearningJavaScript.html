@@ -336,6 +336,7 @@
             <li>Multiple strings can be added together (concatenated). Example: 'some' + 'more' + 'text'</li>
             <li>When adding strings and numbers together JavaScript automatically converts the number to a string. Example: 'hello' + 2 becomes: 'hello2'. This is called
                 type coercion or automatic type conversion.</li>
+            <li>Strings also follow the order of operations.</li>
         </ul>
 
         <p>You can check what kind of value something is (like Numbers or Strings) using the following code:</p>
@@ -349,7 +350,137 @@
         <p>Will instead return 'string' as the value type.</p>
         <br>
         <p>We will now be creating the text in the Order Summary section of the Cart.</p>
-        <p>First make sure you have one Basketball in your cart.</p>
+        <p>First make sure you have one Basketball in your cart with free shipping and one 
+            Aults Plain Cotton T-Shirt 2 pack with free shipping.</p>
+        <p>The first text we will create is the cost of the Items (2): in the order summary.</p>
+        <p>We need to add a dollar sign to the cost of the products.</p>
+        <p>Insted of just a number the cost will be text.</p>
+        <p>One way to create the text is to type the amount directly surrounded by single quotes.</p>
+        <p>Example:</p>
+        <p>'$28.94'</p>
+        <p>It is better to use math to calculate this number.</p>
+        <p>The dollar sign however still needs to be a string (text).</p>
+        <p>Remember we can use the plus sign with a string to concatenate strings.</p>
+        <p>Also remember that if you add a string with numbers JavaScript will automatically convert the number 
+            into a string.</p>
+            <p>So if you have the dollar sign as a string and tried concatenating with a number you would end up 
+                with only a string value.</p>
+                <p>Further if you tried adding a number on at the end it would instead be concatenated as it would
+                    also be automatically turned into a string.</p>
+        <p>Example:</p>
+        <p>'$' + 20.95 + 7.99</p>
+        <p>Woulkd give you the string value:</p>
+        <p>'$20.957.99'</p>
+        <p>The 20.95 was concatenated with insted of added to the 7.99</p>
+        <p>So what we need to do instead is make JavaScript calculate the total before concatenating with the dollar sign.</p>
+        <p>Strings also follow the order of operations.</p>
+        <p>This means we can use brackets to make JavaScript do the calcuations first.</p>
+        <p>Example:</p>
+        <p>'$' + (20.95 + 7.99)</p>
+        <p>This will result in:</p>
+        <p>'$28.939999999999998'</p>
+        <p>This does add the values but has the problem of having way too many digits and is therfore inaccurate.</p>
+        <p>If you remember calcuations with floats can lead to inaccuracies.</p>
+        <p>As you may remember the best practice with money is to calculate in cents and convert back to dollars afterwards (by dividing by 100).</p>
+        <p>Example:</p>
+        <p>'$' + (2095 + 799) / 100</p>
+        <p>This will result in the value of:</p>
+        <p>'$28.94' Which is the same as the Items (2): section value in the Order Summary.</p>
+        <p>Now we will create the whole Items (2): $28.94 line of text under the Order Summary in the Cart.</p>
+        <p>We will go from left to right recreating this line.</p>
+        <p>The Number in brackets for the Items section will need to be calculated with math.</p>
+        <p>This number represents the number of items in the cart (the shirts are one package of two and only counts
+            as one item. The Basketball is the other item).</p>
+        <p>To calculate this we will need to seperate the 'Items (' section from the calcuation and pick it back up
+            after the calculations are made. We however will need brackets around the numbers so they don't get
+        converted into strings prior to being added together.</p>
+        <p>Example:</p>
+        <p>'Items (' + (1 + 1)</p>
+        <p>Put a space after the : to help match what you see in the Order Summary section.
+            We will need to concatenate the end bracket and the dollar sign next.</p>
+        <p>Example:</p>
+        <p>'Items (' + (1 + 1) + '): $'</p>
+        <p>Now we once again need to add up the cost of the products in the cart (we did thsi earlier above).</p>
+        <p>Example:</p>
+        <p>'Items (' + (1 + 1) + '): $' + (2095 + 799) / 100</p>
+        <p>If you type this in the Console and press Enter you will get:</p>
+        <p>'Items (2): $28.94' which is very similar to what we see under the Orders Summary Items Section.</p>
+        <p>Now lets create a pop-up to display the text.</p>
+        <p>The code for creating a pop-up starts with the word alert with the pop-up info in brackets and ends
+            with a semicolon.</p>
+            <p>We can just copy the code from above and put it in the alert brackets.</p>
+        <p>Example:</p>
+        <p>alert('Items (' + (1 + 1) + '): $' + (2095 + 799) / 100);</p>
+        <p>When you press Enter it will display a similar value to what is in the Order Summary Items section.</p>
+        <br>
+        <p>In JavaScript there are three ways to create a string:</p>
+        <ol>
+            <li>You can use single quotes '...' with the string information between the quotes.</li>
+            <li>You can use double quotes "..." with the string information between the quotes.</li>
+                <p>(Note: single quotes are typically preferable because they are a little easier to read and
+                type. Double quotes however may be needed when your string has single quotes inside it like
+                with 'I'm'. JavaScript would interpret the ' in I'm to being the end of the string and the ending
+                single quote as being the start of a string and will give an error. Instead you will want to type
+                "I'm". The double quotes will cause the single quote to no longer be seen as the start or end of a string
+                but instead will be seen as part of the text. Also see Escape Characters below for another way to end a 
+                string without using double quotes).</p>
+            <li>You can use back ticks `...` with the string information between the ticks.</li>
+            <p>(Note the back tick symbol is typically in the top left corner of the keybord).</p>
+        </ol>
+        <h4>Character types</h4>
+        <p>Characters can be a variety of things. Examples:</p>
+        <ol>
+        <li>Letters (a, b, c)</li>
+        <li>Numbers (1 , 2, 3)</li>
+        <li>Symbols (!, @, #)</li>
+        <li>Escape Characters (\', \", \n)</li>
+        </ol>
+        <p>Escape Characters have a backslash followed by a single quote.</p>
+        <p>Normally each letter, number, or symbol counts as a unique character towards the total number of
+            characters in your string but the escape character counts for one character instead of two (\' only counts
+            for one character despite there being two symbols).</p>
+        <p>The escape character will be seen by JavaScript as a single quote that is part of the text and not
+            as the start or ending of a string.</p>
+        <p>This means you can use it in place of a single quote in a string and won't need double quotes.</p>
+        <p>Example:</p>
+        <p>'I\'m' will turn out the same as "I'm".</p>
+        <p>Using backslash doublequote (\") will create a double quote that is only reconized as text and not
+            the start or end of a string.</p>
+        <p>Backslash n (\n) is called the newline character.</p>
+        <p>\n won't create the letter n but instead a new line for text.</p>
+        <p>If for instance you type in the console:</p>
+        <p>alert('some\ntext');</p>
+        <p>You will get a pop-up that on one line says some and below it text.</p>
+        <p>Back ticks will create the same results as single or double quotes for simple text.</p>
+        <p>Example:</p>
+        <p>`hello` is the same as 'hello' or "hello".</p>
+        <p>Strings that use back ticks are called template strings.</p>
+        <p>template strings have special features:</p>
+        <ol>
+            <li>Interpolation: Lets us insert a value directly into a string.</li>
+            <li>You can insert things by including a dollar sign and including them in curly brackets ${}.</li>
+            <li>Multi-line Strings are only available for template strings and allows you to type strings into the
+                console using multiple lines.</li>
+                <p>If for Example you typed 'some on one line and text' on the next it would add the newline character
+                    to give you:</p>
+                    <p>'some\ntext'</p>
+        </ol>
+        <p>Remaking the Items section of the Order Summary using Interpolation instead of 
+            concatenation would look like:</p>
+        <p>`Items (${1 + 1}): $${(2095 + 799) / 100}`</p>
+        <p>The 1 + 1 is for the two items in the cart.</p>
+        <p>Notice that there are two dollar signs in a row before calculating the item prices because the first
+            is text while the second becomes part of Interpolation.</p>
+        <p>Also notice that the calculation for the prices are in brackets so they can be calculated in cents
+            then turned into dollars.</p>
+        <p>You will also see that Interpolation is much cleaner than concatenation for calculating the same
+            code. For this reason Interpolation is the recommended solution.</p>
+        <p>Even though template strings have more features most JavaScript code uses single quotes by default.</p>
+        <p>If you need to insert a value (Interpolation) or use multi-line strings then use template strings.</p>
+
+        <hr>
+        <br>
+        <h3>HTML CSS Review, console.log</h3>
         <p></p>
 
 
@@ -357,11 +488,11 @@
         <br>
         <Footer>
             <h3>Current video location:</h3>
-                <a href="https://youtu.be/SBmSRK3feww?t=3037">Video Link</a>
+                <a href="https://youtu.be/SBmSRK3feww?t=4290">Video Link</a>
                 <p>Current Progress:</p>
                 <p>Line:</p>
                 <p>353</p>
-                <p>17 Jun 2023</p>
+                <p>20 Jun 2023</p>
             </Footer>
             </body>
         
