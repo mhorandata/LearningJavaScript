@@ -481,6 +481,104 @@
         <hr>
         <br>
         <h3>HTML CSS Review, console.log</h3>
+        <p>There are three types of code that work together to create websites:</p>
+        <ol>
+            <li>HTML (Create the Content of the website)</li>
+            <li>CSS (Changes the appearance of the website)</li>
+            <li>JavaScript (Makes the Website interactive)</li>
+        </ol>
+        <p>So far we have focused on just the JavaScript code.</p>
+        <p>This is not a HTML or CSS course and the focus will be on JavaScript but because the three work
+            together there is some HTML and CSS code that we will want to know for this course.</p>
+        <p>To write HTML and CSS code you need to install a code editor.</p>
+        <p>Code Editors help write and organize code.</p>
+        <p>VS code (Visual Studio Code) is the currently the most popular code editor.</p>
+        <p>To install Visual Studio Code:</p>
+        <a href="https://code.visualstudio.com/">Visual Studio Code Link</a>
+        <p>Click on the Download for Windows (or choose a different system from the drop-down).</p>
+        <p>Follow the instructions to download and install.</p>
+        <br>
+        <h4>HTML</h4>
+        <p>We will start with the basics of HTML.</p>
+        <p>HTML stands for Hyper Text Markup Language.</p>
+        <p>Just like JavaScript HTML is giving instructions to a computer.</p>
+        <p>We write HTML inside a file using the code editor.</p>
+        <p>Go to your desktop and create a new folder (on a blank space on your desktop rightclick and hover over New
+            then choose Folder).</p>
+        <p>This folder will contain all the code we will write in this course.</p>
+        <p>Name (or rename) the folder:</p>
+        <p>javascript-Course</p>
+        <p>Now we will open VS code. You can search for this in the start menu using the words:</p>
+        <p>Visual Studio Code</p>
+        <p>In Visual Studio Code click File, Open Folder...,  then find the folder you created and click it (
+            It should be on the Desktop) and choose Select Folder.</p>
+        <p>You can close the Get Started tab.</p>
+        <p>We will want to create an HTML file. To do this you can click the New File... icon in the top left of the
+            Visual Studio EXPLORER section or right click on the name of your folder in this section and choose New File...</p>
+        <p>name this file:</p>
+        <p>website.html</p>
+        <p>Ending the file name with .html will tell the computer that this is an HTML file with HTML code.</p>
+        <br>
+        <p>We will now go over some basic HTML code.</p>
+        <p>First type the less than symbol &lt; at the top of your open file tab (named website.html)</p>
+        <p>after the &lt; symbol type button and greater than &gt;.</p>
+        <p>You will notice the code editor will automatically add a &lt;/button&gt; after the &lt;button&gt; you just
+            typed. Visual Studio Code has built in auto complete like this to help save us time and effort.</p>
+        <p>&lt;button&gt; tells the computer to create a button.</p>
+        <p>Between the &lt;button&gt; and &lt;/button&gt; type the word hello.</p>
+        <p>Example:</p>
+        <p>&lt;button&gt;hello&lt;/button&gt;</p>
+        <p>Make sure you save your file with Ctrl s or clicking File in the top left corner and choosing Save.</p>
+        <p>Now go to the file you created (Should be on the desktop).</p>
+        <p>Find the HTML file in the folder you created and right click. Then go down to Open with and find Google
+            Chrome.</p>
+        <p>What will come up is a button at the top left of the page saying hello.</p>
+        <p>It is easiest to work with your code side by side. You can use the Restore Down ((looks like two boxes with 
+            one in front of the other (between the - and X in the top right of any window) to make the page size adjustable))</p>
+        <p>In Visual Studio under your &lt;button&gt;hello&lt;/button&gt; line (Press Enter to start a new line) type:</p>
+        <p>&lt;p&gt;</p>
+        <p>Once again you will notice it automatically adds &lt;/p&gt; at the end of the code you just typed.</p>
+        <p>This code is for writing paragraphs and whatever text you put between the &lt;p&gt; and &lt;/p&gt; will 
+            adjust to follow the paragraph code.</p>
+        <p>Example:</p>
+        <p>&lt;p&gt;paragraph of text&lt;/p&gt;</p>
+        <p>Make sure you save the code (Ctrl s or File Save).</p>
+        <p>To see the changes you made to your website click the Refresh symbol (Says Reload this page when hovered over and looks like 
+            an arrow going clockwise. You can also do Ctrl R to refresh the website) on the website that opened when you
+            opened your HTML File.</p>
+        <p>After the page is refreshed you will notice below the hello button is now the text:</p>
+        <p>paragraph of text</p>
+        <p>The computer created a paragraph of text. The computer Reads our code line by line (starting at the top) and preforms the actions.</p>
+        <p>HTML Syntax rules:</p>
+        <ul>
+            <li>Each different type of code (like p for paragraph or button for creating a button) is called an Element.</li>
+            <li>To create an Element start with an &lt; symbol, then the Elements name, and then the &gt; symbol.
+                the Element with the less than and greter than symbols (Example: &lt;p&gt; ) is called an HTML tag.</li>
+            <li>Every HTML tag needs a matching ending tag that has a &lt;/ symbol in the front (Example: &lt;/p&gt;).</li>
+            <li>&lt;p&gt; (without the slash) is called the opening tag while the &lt;/p&gt; is called the closing tag.</li>
+            <li>Because the syntax is reconized by the computer you can have tags inside of other tags.</li>
+            <p>Example: &lt;p&gt;paragraph of &lt;button&gt;hello&lt;/button&gt; text&lt;/p&gt;</p>
+            <p>If you save the Visual Studio Code file and refresh the website File page you will see paragraph of hello
+                text but the hello portion in the middle will be another button.</p>
+            <li> Having an Element inside of another Element is called nesting.</li>
+            <li>Having multiple spaces in HTML are combined into one space. So if you typed a bunch of extra spaces
+                in a paragraph element between words it would still only show as one space in the actual website.</li>
+            <li>Newlines also count as spaces. So if in Visual Studio Code you added a space in the text of a paragraph
+                element it would only show up as a space (doesn't add additional spaces if there is a space then a newline).</li>
+            <p>You can make your code easier to read by adding in newlines between seperate elements in Visual Studio Code.</p>
+            <li>It is better to put the contents of an element on it's own line and not on the same line as
+                other elements.</li>
+            <p>You can also seperate the start tag, contents, and closing tags on their own seperate lines to make the 
+                code easier to read in Visual Studio code.</p>
+                <p>Example:</p>
+                <p>&lt;button&gt;</p>
+                <p>hello</p>
+                <p>&lt;/button&gt;</p>
+            <li>A Web page is a single page ((on a website (like the home page, cart page, etc.))).</li>
+            <li>The combination of pages (like the home page, cart page, etc.) is called a website.</li>
+        </ul>
+        <br>
+        <h4>CSS</h4>
         <p></p>
 
 
@@ -488,11 +586,11 @@
         <br>
         <Footer>
             <h3>Current video location:</h3>
-                <a href="https://youtu.be/SBmSRK3feww?t=4290">Video Link</a>
+                <a href="https://youtu.be/SBmSRK3feww?t=4968">Video Link</a>
                 <p>Current Progress:</p>
                 <p>Line:</p>
-                <p>484</p>
-                <p>20 Jun 2023</p>
+                <p>582</p>
+                <p>22 Jun 2023</p>
             </Footer>
             </body>
         
