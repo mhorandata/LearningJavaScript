@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<style>
+    .indented {
+        padding-left: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+</style>
+
     <head>
         <meta charset="UTF-8">
 
@@ -657,22 +666,51 @@
         <ul>
         <li>HTML Attributes always go on the opeing tag.</li>
         <li>We always add a space between the Element Name and the attribute to separate them.</li>
-        <li></li>
-
+        <li>After the element name comes the Attribute name.</li>
+        <p>Example "title" in: &lt;button title=</p>
+        <li>The value in the quotation marks that the attribute is being changed to is called the Attribute Value</li>
+        <p>Example "Good Job!" in &lt;button title="Good Job!"&gt;</p>
+        <li>The Attribute name and value are seperated by an equal sign.</li>
+        <li>There are no spaces around the equal sign.</li>
+        <li>The Attribute value is surrounded by double quotes.</li>
+        <li>The class Attribute can be used to style elements (see the next section for details).</li>
         </ul>
-        
+        <br>
+        <h4>The class Attribute</h4>
+        <p>The class attribute adds a label to an element.</p>
+        <p>Example labeling as a "red-button":</p>
+        <p>&lt;button title="Good Job!" class="red-button"&gt;</p>
+        <p>Once the button is labeled it can be selected by CSS Code.</p>
+        <p>To select a class label with CSS first change the CSS code in the style element section to be a dot . followed
+            by the label name.</p>
+        <p>Example:</p>
+        <p class="indented">&lt;style&gt;</p>
+        <p class="indented">.red-button {</p>
+        <p class="indented">background-color: red;</p>
+        <p class="indented">color: white;</p>
+        <p class="indented">border: none;</p>
+        <p class="indented">}</p>
+        <p class="indented">&lt;/style&gt;</p>
+        <br>
+        <p class="indented">&lt;button title="Good Job!" class="red-button"&gt;</p>
+        <p>When we start the Selector with a dot . it tells the computer that we are looking for a class.</p>
+        <p>If we have .red-button as the Selector like in above example then the Computer will look for all other
+            .red-button class Attribute labels throughout our elements and will apply the CSS code changes to all of them.</p>
+        <p>If we change the class label in an element the CSS code for the former label won't apply to the new label and 
+            only the CSS code with the Selector matching the new class label will be applied.</p>
 
+        <p>HTML Structure</p>
 
 
         <hr>    
         <br>
         <Footer>
             <h3>Current video location:</h3>
-                <a href="https://youtu.be/SBmSRK3feww?t=5347">Video Link</a>
+                <a href="https://youtu.be/SBmSRK3feww?t=5566">Video Link</a>
                 <p>Current Progress:</p>
                 <p>Line:</p>
-                <p>582</p>
-                <p>23 Jun 2023</p>
+                <p>703</p>
+                <p>05 Jul 2023</p>
             </Footer>
             </body>
         
